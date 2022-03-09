@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(133, 125, 67, 1) 35%, rgba(9, 60, 70, 1) 100%);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr auto;
+    gap: 0px 0px;
+    grid-template-areas: "header" "body" "footer";
+}
+
+
+/*   HEADER  */
+
+.header__title {
+    display: flex;
+    height: 70px;
+    width: 100%;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(68, 60, 2, 1) 35%, rgba(9, 60, 70, 1) 100%);
+    flex-direction: wrap;
+}
+
+.header-nav {
+    display: flex;
+    gap: 20px;
+    margin-left: 1000px;
+    list-style: none;
+    margin-top: 15px;
+    flex-direction: wrap;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: white;
+    margin-left: 50px;
+}
+
+.header-nav a:hover {
+    text-decoration: none;
+    color: rgb(199, 201, 202);
+}
+
+.logo {
+    color: rgb(105, 98, 2);
+    font-size: 18px;
+    margin-top: 13px;
+    margin-left: 25px;
+}
+
+.header-nav .fa-bars {
+    margin-top: 7px;
+    color: #fff;
+    display: none;
+}
+
+
+/*  BODY*/
+
+.body__item {
+    display: flex;
+    height: 880px;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    flex-direction: wrap;
+}
+
+.img-body {
+    margin-top: 150px;
+    height: 350px;
+    width: 500px;
+    margin-left: 150px;
+    border-radius: 50px;
+}
+
+.img-body {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px 18px red;
+}
+
+.parrafo-body {
+    margin-top: 180px;
+    margin-left: 350px;
+    height: 350px;
+    width: 600px;
+    color: white;
+    line-height: 24px;
+    flex-direction: wrap;
+}
+
+
+/* history*/
+
+body {
+    text-align: center;
+}
+
+.card {
+    background: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    height: 350px;
+    margin: 1rem;
+    position: relative;
+    width: 250px;
+}
+
+.card-1 {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.card-1:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+
+/* FOOTER*/
+
+footer {
+    height: 50px;
+    margin-top: 50px;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(68, 60, 2, 1) 35%, rgba(9, 60, 70, 1) 100%);
+}
+
+.parrafo-fotter {
+    padding-top: 10px;
+    text-align: center;
+    color: white;
+}
+
+.fa-heart {
+    color: red;
+}
+
+
+/* BOX DE GUITARRISTAS*/
+
+img {
+    width: 100%;
+}
+
+.row img:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.row {
+    display: flex;
+    padding: 5px;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    flex-direction: wrap;
+}
+
+.column {
+    flex: 25%;
+    padding: 5px;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    flex-direction: wrap;
+}
+
+.column img {
+    width: 100%;
+    margin-top: 5px;
+}
+
+
+/* FORM*/
+
+.form__1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 790px;
+}
+
+.form__2 {
+    height: 400px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.form__1 input {
+    height: 40px;
+    width: 350px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.form__1 button {
+    height: 40px;
+    width: 100px;
+    background-color: rgb(255, 217, 0);
+    margin-top: 5px;
+    border: 0;
+    margin-left: 5px;
+}
+
+.form__1 button:hover {
+    background-color: rgb(253, 229, 93);
+    cursor: pointer;
+    margin-left: 25px;
+}
+
+
+/* top 10*/
+
+.row__2 img {
+    width: 100%;
+    display: flex;
+}
+
+
+/*media queres*/
+
+
+/*  home */
+
+@media (max-width: 700px) {
+    .header__title {
+        width: 100%;
+        float: left;
+        background: rgb(3, 43, 43);
+    }
+    .header-nav {
+        display: none;
+    }
+    .body__item {
+        flex-direction: column;
+    }
+    .img-body {
+        width: 50%;
+        float: left;
+    }
+    .parrafo-body {
+        margin-left: -0px;
+    }
+    footer,
+    .parrafo-footer {
+        width: 100%;
+        float: left;
+        background: rgb(3, 43, 43);
+    }
+    .fa-bars {
+        display: block;
+    }
+    .row {
+        flex-direction: column;
+    }
+}
+
+
+/* guitarristas*/
