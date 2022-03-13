@@ -12,7 +12,6 @@ body {
     grid-template-columns: 1fr auto;
     grid-template-rows: 1fr auto;
     gap: 0px 0px;
-    grid-template-areas: "header" "body" "footer";
 }
 
 
@@ -21,18 +20,23 @@ body {
 .header__title {
     display: flex;
     height: 70px;
-    width: 100%;
+    width: 100% !important;
     background: rgb(2, 0, 36);
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(68, 60, 2, 1) 35%, rgba(9, 60, 70, 1) 100%);
+    grid-column-start: 1;
+    grid-column-end: -1;
     flex-direction: wrap;
 }
 
 .header-nav {
+    width: 100% !important;
     display: flex;
     gap: 20px;
     margin-left: 1000px;
     list-style: none;
     margin-top: 15px;
+    grid-column-start: 1;
+    grid-column-end: -1;
     flex-direction: wrap;
 }
 
@@ -77,6 +81,8 @@ body {
     width: 500px;
     margin-left: 150px;
     border-radius: 50px;
+    animation: flipInX;
+    animation-duration: 2s;
 }
 
 .img-body {
@@ -93,6 +99,8 @@ body {
     color: white;
     line-height: 24px;
     flex-direction: wrap;
+    animation: bounce;
+    animation-duration: 2s;
 }
 
 
@@ -110,6 +118,8 @@ body {
     margin: 1rem;
     position: relative;
     width: 250px;
+    animation: zoomIn;
+    animation-duration: 2s;
 }
 
 .card-1 {
@@ -125,10 +135,13 @@ body {
 /* FOOTER*/
 
 footer {
+    width: 100% !important;
     height: 50px;
     margin-top: 50px;
     background: rgb(2, 0, 36);
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(68, 60, 2, 1) 35%, rgba(9, 60, 70, 1) 100%);
+    grid-column-start: 1;
+    grid-column-end: -1;
 }
 
 .parrafo-fotter {
@@ -166,6 +179,8 @@ img {
     grid-column-start: 1;
     grid-column-end: -1;
     flex-direction: wrap;
+    animation: flipOutX;
+    animation-duration: 2s;
 }
 
 .column img {
@@ -182,6 +197,8 @@ img {
     align-items: center;
     width: 100%;
     height: 790px;
+    animation: zoomIn;
+    animation-duration: 2s;
 }
 
 .form__2 {
@@ -241,9 +258,13 @@ img {
     .img-body {
         width: 50%;
         float: left;
+        animation: zoomIn;
+        animation-duration: 2s;
     }
     .parrafo-body {
         margin-left: -0px;
+        animation: zoomIn;
+        animation-duration: 2s;
     }
     footer,
     .parrafo-footer {
