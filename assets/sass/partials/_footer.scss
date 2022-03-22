@@ -1,0 +1,47 @@
+/* FOOTER*/
+
+footer {
+    width: 100% !important;
+    height: 50px;
+    margin-top: 50px;
+    background: #020024;
+    background: linear-gradient(90deg, #020024 0%, #443c02 35%, #093c46 100%);
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
+.parrafo-fotter {
+    padding-top: 10px;
+    text-align: center;
+    color: white;
+}
+
+.fa-heart {
+    color: red;
+}
+
+
+/*media queres*/
+
+
+/*  home */
+
+@media (max-width: 768px) {
+    .parrafo-body,
+    p {
+        width: 100%;
+        font-size: 10px;
+        margin-left: -0px;
+        animation: zoomIn;
+        animation-duration: 2s;
+    }
+    footer,
+    .parrafo-footer {
+        width: 100%;
+        background: #032b2b;
+        font-size: 8px;
+    }
+    .fa-bars {
+        display: block;
+    }
+}

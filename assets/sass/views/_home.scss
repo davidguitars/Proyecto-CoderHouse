@@ -1,0 +1,196 @@
+/*  BODY*/
+
+.body__item {
+    display: flex;
+    height: 880px;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    flex-direction: wrap;
+}
+
+.img-body {
+    height: 100%;
+    width: 100%;
+    max-width: 350px;
+    max-height: 350px;
+    border-radius: 50px;
+    animation: flipInX;
+    animation-duration: 2s;
+    flex-direction: wrap;
+}
+
+.content-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.img-body {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px 18px red;
+}
+
+.parrafo-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: 50px;
+    height: 100%;
+    width: 50%;
+    padding: 40px;
+    color: white;
+    line-height: 24px;
+    flex-direction: wrap;
+    animation: bounce;
+    animation-duration: 2s;
+}
+
+
+/* history*/
+
+body {
+    text-align: center;
+}
+
+.card {
+    background: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    height: 350px;
+    margin: 1rem;
+    position: relative;
+    width: 250px;
+    animation: zoomIn;
+    animation-duration: 2s;
+}
+
+.card-1 {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.card-1:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+
+/* BOX DE GUITARRISTAS*/
+
+img {
+    width: 100%;
+}
+
+.row img:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.row {
+    display: flex;
+    padding: 5px;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    flex-direction: wrap;
+}
+
+.column {
+    flex: 25%;
+    padding: 5px;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    flex-direction: wrap;
+    animation: flipOutX;
+    animation-duration: 2s;
+}
+
+.column img {
+    width: 100%;
+    margin-top: 5px;
+}
+
+
+/* FORM*/
+
+.form__1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 790px;
+    animation: zoomIn;
+    animation-duration: 2s;
+}
+
+.form__2 {
+    height: 400px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.form__1 input {
+    height: 40px;
+    width: 350px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.form__1 button {
+    height: 40px;
+    width: 100px;
+    background-color: #ffd900;
+    margin-top: 5px;
+    border: 0;
+    margin-left: 5px;
+}
+
+.form__1 button:hover {
+    background-color: #fde55d;
+    cursor: pointer;
+    margin-left: 25px;
+}
+
+
+/* top 10*/
+
+.row__2 img {
+    width: 100%;
+    display: flex;
+}
+
+
+/*media queres*/
+
+
+/*  home */
+
+@media (max-width: 768px) {
+    .body__item {
+        flex-direction: column;
+    }
+    .content-img {
+        width: 100%;
+    }
+    .img-body {
+        width: 100%;
+        height: auto;
+        margin: auto;
+        animation: zoomIn;
+        animation-duration: 2s;
+    }
+    .parrafo-body {
+        width: 100%;
+    }
+    .fa-bars {
+        display: block;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .card .card-1 {
+        flex-direction: column;
+    }
+}

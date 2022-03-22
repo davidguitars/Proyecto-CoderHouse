@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Amatic SC' 'Open Sans', sans-serif;
+    background: #020024;
+    background: linear-gradient(90deg, #020024 0%, #857d43 35%, #093c46 100%);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr auto;
+    gap: 0px 0px;
+}
+
+h1,
+ul,
+li,
+a {
+    font-family: "Amatic SC";
+    font-size: 18px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 26.4px;
+}
+
+h3 {
+    font-family: "Amatic SC";
+    font-size: 20px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 15.4px;
+}
+
+p {
+    font-family: "Amatic SC";
+    font-size: 25px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+blockquote {
+    font-family: "Amatic SC";
+    font-size: 21px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+pre {
+    font-family: "Amatic SC";
+    font-size: 20px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 18.5714px;
+}
