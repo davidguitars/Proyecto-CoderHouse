@@ -255,7 +255,8 @@ body {
 .card-1:hover {
   -webkit-transform: scale(1.25, 1.25);
   transform: scale(1.2, 1.2);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); }
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 999; }
 
 .card-1::after {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
