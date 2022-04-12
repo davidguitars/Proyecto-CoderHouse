@@ -5,26 +5,19 @@
 }
 
 @mixin background() {
-    background: #020024;
-    background: linear-gradient(90deg, #020024 0%, #857d43 35%, #093c46 100%);
+    background-image: linear-gradient(to right top, #8e8e18, #747617, #5c5f15, #454812, #30330e, #303817, #303e1f, #314328, #3d684a, #408f75, #37b8ab, #1be2eb);
 }
 
 body {
     font-family: 'Amatic SC' 'Open Sans', sans-serif;
     @include background();
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: 1fr auto;
-    gap: 0px 0px;
 }
 
 .error {
-    border: 1px #f00;
-    background-color: rgb(231, 16, 16);
-    &--serious {
-        @extend .error;
-        border-width: 3px;
-        width: 100px;
+    box-shadow: 0 0 4px 10px rgba(0, 0, 0, 0.2);
+    &--parrafo-body {
+        @extend .parrafo-body;
+        border-radius: 1px;
     }
 }
 
@@ -32,16 +25,17 @@ h1,
 ul,
 li,
 a {
-    font-family: "Amatic SC";
+    font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     font-style: normal;
     font-variant: normal;
     font-weight: 700;
     line-height: 26.4px;
+    text-decoration: none;
 }
 
 h3 {
-    font-family: "Amatic SC";
+    font-family: 'Open Sans', sans-serif;
     font-size: 20px;
     font-style: normal;
     font-variant: normal;
@@ -50,16 +44,17 @@ h3 {
 }
 
 p {
-    font-family: "Amatic SC";
-    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
     font-style: normal;
     font-variant: normal;
     font-weight: 400;
-    line-height: 20px;
+    line-height: 1.5rem;
+    padding: 5px;
 }
 
 blockquote {
-    font-family: "Amatic SC";
+    font-family: 'Open Sans', sans-serif;
     font-size: 21px;
     font-style: normal;
     font-variant: normal;
@@ -68,7 +63,7 @@ blockquote {
 }
 
 pre {
-    font-family: "Amatic SC";
+    font-family: 'Open Sans', sans-serif;
     font-size: 20px;
     font-style: normal;
     font-variant: normal;

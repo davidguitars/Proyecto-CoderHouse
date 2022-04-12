@@ -1,18 +1,29 @@
 /*  BODY*/
 
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 .body__item {
     display: flex;
-    height: 880px;
-    grid-column-start: 1;
-    grid-column-end: -1;
-    flex-direction: wrap;
+    height: 86.7vh;
+}
+
+.content-body {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    flex-direction: row;
 }
 
 .img-body {
     height: 100%;
     width: 100%;
-    max-width: 350px;
-    max-height: 350px;
+    max-width: 550px;
+    max-height: 550px;
     border-radius: 50px;
     animation: flipInX;
     animation-duration: 2s;
@@ -22,10 +33,7 @@
 .content-img {
     display: flex;
     align-items: center;
-    justify-content: center;
     width: 50%;
-    margin-top: 50px;
-    margin-left: 50px;
 }
 
 .img-body {
@@ -34,34 +42,45 @@
     box-shadow: 5px 10px 18px red;
 }
 
+.error {
+    display: flex;
+}
+
 .parrafo-body {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: start;
     justify-content: center;
-    margin-top: 50px;
-    margin-left: 50px;
-    height: 100%;
     width: 50%;
     padding: 40px;
-    color: white;
+    color: rgb(233, 227, 227);
     line-height: 24px;
-    flex-direction: wrap;
     animation: bounce;
     animation-duration: 2s;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.parrafo-body:hover {
+    box-shadow: 0 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 
 /* history*/
 
-body {
-    text-align: center;
+.container-history {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-around;
+    align-items: stretch;
 }
 
 .card {
     background: #fff;
     border-radius: 2px;
-    display: inline-block;
-    height: 350px;
+    display: inline-flex;
+    height: auto;
     margin: 1rem;
     position: relative;
     width: 250px;
@@ -69,20 +88,47 @@ body {
     animation-duration: 2s;
 }
 
+.card p {
+    margin-top: 8px;
+}
+
 .card-1 {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .card-1:hover {
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    -webkit-transform: scale(1.25, 1.25);
+    transform: scale(1.2, 1.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card-1::after {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card-1:hover::after {
+    opacity: 1;
+}
+
+.btn-warning {
+    margin-top: auto;
 }
 
 
 /* BOX DE GUITARRISTAS*/
 
-img {
-    width: 100%;
+.carrusel {
+    height: 880px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: wrap
 }
 
 .row img:hover {
@@ -91,25 +137,25 @@ img {
 
 .row {
     display: flex;
-    padding: 5px;
-    grid-column-start: 1;
-    grid-column-end: -1;
-    flex-direction: wrap;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 auto;
+    padding: 70px;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: center;
 }
 
 .column {
-    flex: 25%;
-    padding: 5px;
-    grid-column-start: 1;
-    grid-column-end: -1;
-    flex-direction: wrap;
+    height: 86.7vh;
+    flex: 50%;
+    flex-direction: row;
     animation: zoomIn;
     animation-duration: 2s;
 }
 
 .column img {
     width: 100%;
-    margin-top: 5px;
 }
 
 
@@ -120,15 +166,10 @@ img {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 790px;
+    height: 86.7vh;
     animation: zoomIn;
     animation-duration: 2s;
-}
-
-.form__2 {
-    height: 400px;
-    margin-top: 50px;
-    margin-left: 50px;
+    flex-direction: row;
 }
 
 .form__1 input {
@@ -140,25 +181,26 @@ img {
 
 .form__1 button {
     height: 40px;
-    width: 100px;
-    background-color: #ffd900;
-    margin-top: 5px;
-    border: 0;
+    width: 170px;
     margin-left: 5px;
+    background-color: #ffd900;
+    opacity: 0.4;
+    transition: 0.3s;
+}
+
+.form__1 h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    font-weight: 500;
+    color: #faf3f3;
 }
 
 .form__1 button:hover {
     background-color: #fde55d;
     cursor: pointer;
-    margin-left: 25px;
-}
-
-
-/* top 10*/
-
-.row__2 img {
-    width: 100%;
-    display: flex;
+    opacity: 1;
 }
 
 
@@ -170,27 +212,47 @@ img {
 @media (max-width: 768px) {
     .body__item {
         flex-direction: column;
+        width: 100%;
+        height: 100%;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .content-body {
+        flex-direction: column;
     }
     .content-img {
-        width: 100%;
+        flex-direction: column;
     }
     .img-body {
-        width: 100%;
         height: auto;
         margin: auto;
         animation: zoomIn;
         animation-duration: 2s;
     }
     .parrafo-body {
+        height: auto;
         width: 100%;
+        margin-top: 38px;
+        flex-direction: column;
     }
-    .fa-bars {
-        display: block;
+    .parrafo-body>p {
+        font-size: 10px
     }
     .row {
         flex-direction: column;
     }
+    .column {
+        flex-direction: column;
+    }
     .card .card-1 {
+        flex-direction: column;
+    }
+    .carrusel {
+        width: 100% !important;
+        flex-direction: column;
+    }
+    .form__1 {
+        width: 100%;
         flex-direction: column;
     }
 }
