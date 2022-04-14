@@ -248,12 +248,19 @@ body {
     .card .card-1 {
         flex-direction: column;
     }
+    .card {
+        z-index: 2;
+    }
     .carrusel {
         width: 100% !important;
         flex-direction: column;
+        z-index: 2;
     }
     .form__1 {
         width: 100%;
         flex-direction: column;
+    }
+    .form__2 {
+        z-index: 2;
     }
 }
